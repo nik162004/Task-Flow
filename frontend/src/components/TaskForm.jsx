@@ -37,32 +37,46 @@ function TaskForm({ onTaskCreated }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Create Task</h2>
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <h2 className="text-2xl font-bold text-slate-800">
+        Create New Task
+      </h2>
 
-      <input
-        type="text"
-        name="title"
-        placeholder="Task title"
-        value={formData.title}
-        onChange={handleChange}
-      />
+      <div>
+        <label className="block text-sm font-medium mb-2">
+          Title
+        </label>
 
-      <br />
-      <br />
+        <input
+          type="text"
+          name="title"
+          placeholder="Enter task title..."
+          value={formData.title}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
 
-      <textarea
-        name="description"
-        placeholder="Task description"
-        value={formData.description}
-        onChange={handleChange}
-      />
+      <div>
+        <label className="block text-sm font-medium mb-2">
+          Description
+        </label>
 
-      <br />
-      <br />
+        <textarea
+          name="description"
+          rows="4"
+          placeholder="Describe your task..."
+          value={formData.description}
+          onChange={handleChange}
+          className="w-full border border-gray-300 rounded-xl px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
 
-      <button type="submit">
-        Add Task
+      <button
+        type="submit"
+        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+      >
+        + Add Task
       </button>
     </form>
   );

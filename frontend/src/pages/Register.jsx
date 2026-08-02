@@ -31,53 +31,86 @@ function Register() {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "50px auto" }}>
-      <h1>Register</h1>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 via-white to-indigo-100 px-6">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8">
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
-        />
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-slate-800">
+            Create Account
+          </h1>
 
-        <br />
-        <br />
+          <p className="text-gray-500 mt-2">
+            Join TaskFlow and organize your work.
+          </p>
+        </div>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-        />
+        <form onSubmit={handleSubmit} className="space-y-5">
 
-        <br />
-        <br />
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Name
+            </label>
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-        />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
 
-        <br />
-        <br />
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Email
+            </label>
 
-        <button type="submit">
-          Register
-        </button>
-      </form>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
 
-      <br />
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Password
+            </label>
 
-      <Link to="/login">
-        Already have an account? Login
-      </Link>
+            <input
+              type="password"
+              name="password"
+              placeholder="Minimum 8 characters"
+              value={formData.password}
+              onChange={handleChange}
+              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-indigo-600 hover:bg-indigo-700 transition text-white py-3 rounded-xl font-semibold"
+          >
+            Create Account
+          </button>
+
+        </form>
+
+        <p className="text-center text-gray-600 mt-6">
+          Already have an account?{" "}
+          <Link
+            to="/login"
+            className="text-indigo-600 font-semibold hover:underline"
+          >
+            Login
+          </Link>
+        </p>
+
+      </div>
     </div>
   );
 }
