@@ -53,7 +53,9 @@ A modern **Full Stack MERN Task Management Application** that helps users organi
 
 ### Login
 
-_Add screenshot here_
+![Register](./screenshots/register.png)
+![Login](./screenshots/login.png)
+![Dashboard](./screenshots/dashboard.png)
 
 ### Dashboard
 
