@@ -51,19 +51,17 @@ A modern **Full Stack MERN Task Management Application** that helps users organi
 
 ## 📸 Screenshots
 
-### Login
+### Register
 
 ![Register](./screenshots/register.png)
+
+### Login
+
 ![Login](./screenshots/login.png)
-![Dashboard](./screenshots/dashboard.png)
 
 ### Dashboard
 
-_Add screenshot here_
-
-### Create Task
-
-_Add screenshot here_
+![Dashboard](./screenshots/dashboard.png)
 
 ---
 
